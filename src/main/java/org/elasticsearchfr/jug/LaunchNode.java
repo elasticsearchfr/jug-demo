@@ -24,28 +24,15 @@ public class LaunchNode {
 		// We remove old data before launching tests
 		removeOldDataDir();
 		
-		// Let's generate some nodes
-		for (int i = 0; i < 10; i++) {
-			NodeBuilder.nodeBuilder().node();
-		}
+		// Let's generate 10 nodes
 		
-		Node node = NodeBuilder.nodeBuilder().client(true).node();
-		node.client().admin().cluster().prepareHealth()
-				.setWaitForYellowStatus().execute().actionGet();
+		// Create a client Node
 		
-		// Let's index some docs
-		String source = null;
-		BulkRequestBuilder brb = null;
+		// Wait for healthy status
 		
-		for (int j = 0; j < 30; j++) {
-			brb = node.client().prepareBulk();
-			for (int i = 0; i < 10000; i++) {
-				source = jsonGenerator(i,j).string();
-				brb.add(new IndexRequest("montpellier", "jug", "talk_"+j+"_"+i).source(source));
-			}
-			brb.execute().actionGet();
-		}
-		
+		// Let's index 10000 docs
+
+		// Wait 10 minutes
 		Thread.sleep(10 * 60 * 1000);
 	}
 	
