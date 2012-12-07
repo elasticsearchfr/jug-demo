@@ -17,7 +17,7 @@
 			brb = node.client().prepareBulk();
 			for (int i = 0; i < 10000; i++) {
 				source = jsonGenerator(i,j).string();
-				brb.add(new IndexRequest("montpellier", "jug", "talk_"+j+"_"+i).source(source));
+				brb.add(new IndexRequest("brest", "jug", "talk_"+j+"_"+i).source(source));
 			}
 			brb.execute().actionGet();
 		}

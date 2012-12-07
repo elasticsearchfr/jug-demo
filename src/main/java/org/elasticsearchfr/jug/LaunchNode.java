@@ -17,6 +17,8 @@ public class LaunchNode {
 	protected static Node node;
 
 	/**
+	 * During the demo, we first build a client node and inject documents in the running cluster (4 nodes)
+	 * Then we will create 10 nodes from the current jvm and generate more documents.
 	 * @param args
 	 * @throws Exception 
 	 */
@@ -24,9 +26,10 @@ public class LaunchNode {
 		// We remove old data before launching tests
 		removeOldDataDir();
 		
-		// Let's generate 10 nodes
+		// Let's generate 10 nodes (ignore it for the first time)
 		
 		// Create a client Node
+		node = null;
 		
 		// Wait for healthy status
 		
