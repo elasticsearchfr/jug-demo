@@ -91,7 +91,7 @@ curl -XPOST 'localhost:9200/test/_analyze?analyzer=soundex&pretty=1' -d 'The qui
 # use the french stemmer
 curl -XPOST 'localhost:9200/test/_analyze?analyzer=stemmer&pretty=1' -d 'elephant cheval chevaux'
 # use the francais analyzer
-curl -XPOST 'localhost:9200/test/_analyze?analyzer=francais&pretty=1' -d 'J"imagine que ce garçon est protégé par la Force !'
+curl -XPOST 'localhost:9200/test/_analyze?analyzer=francais&pretty=1' -d 'J"imagine que ce gar¬ç√ßon est prot√©g√© par la Force !'
 # Beware of analysis
 curl -XPOST 'localhost:9200/test/_analyze?analyzer=francais&pretty=1' -d 'un avion'
 curl -XPOST 'localhost:9200/test/_analyze?analyzer=francais&pretty=1' -d 'des avions'

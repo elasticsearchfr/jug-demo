@@ -21,12 +21,12 @@ curl -XPOST localhost:9200/jug/talk?pretty=1 -d '{
 
 curl -XPOST localhost:9200/jug/talk -d '{
 	"speaker" : "David Pilato",
-	"title" : "Elasticsearch : la recherche Žlastique pour tous !"
+	"title" : "Elasticsearch : la recherche Ã©lastique pour tous !"
 }'
 
 curl -XPOST localhost:9200/jug/talk -d '{
 	"speaker" : "Tugdual Grall",
-	"title" : "NoSQL : le changement, c'est maintenant !"
+	"title" : "NoSQL : le changement, c est maintenant !"
 }'
 
 curl -XPOST localhost:9200/jug/talk -d '{
